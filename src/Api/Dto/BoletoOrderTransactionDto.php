@@ -9,13 +9,13 @@ class BoletoOrderTransactionDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var \BellunoApi\Api\Dto\PixTransactionDto $bankslip public property
+     * @var \BellunoApi\Api\Dto\BoletoTransactionDto $bankslip public property
      */
     public $bankslip;
 
     /**
      * Constructor to set initial or default values of member properties
-     * @param \BellunoApi\Api\Dto\PixTransactionDto $bankslip 
+     * @param \BellunoApi\Api\Dto\BoletoTransactionDto $bankslip 
      */
     public function __construct()
     {

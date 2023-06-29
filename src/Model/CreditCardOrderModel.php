@@ -47,10 +47,10 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
             
             "payer_ip" => $this->ip,
 
-            "client_name" => $this->cardHolder->getName(),            
-            "client_document" => $this->cardHolder->getDocumentNumber(),
-            "client_email" => $this->cardHolder->getContact()->getEmail(),
-            "client_cellphone" => $this->cardHolder->getContact()->getPhone(),
+            "client_name" => $this->clientHolder->getName(),            
+            "client_document" => $this->clientHolder->getDocumentNumber(),
+            "client_email" => $this->clientHolder->getContact()->getEmail(),
+            "client_cellphone" => $this->clientHolder->getContact()->getPhone(),
 
             "details" => $this->details,
             "value" => $this->value,
@@ -98,7 +98,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
      */ 
     public function setInstallments($installments)
     {
-        $this->installments = $installments;
+        $this->installments = (int)$installments;
 
         return $this;
     }

@@ -170,8 +170,6 @@ class TransactionService extends BaseServiceRequest {
         
     }
     
-
-    
     public function createCreditCardTransaction(
         OrderModel $order
     ) {

@@ -22,7 +22,19 @@ abstract class TransactionStatus {
         "PAID"
     ];
 
-    public static function getAllowedTransactionStatus() {
+    // PAID
+    
+    // OPEN
+    // MANUAL_ANALYSIS
+    // EXPIRED
+    // CLIENT_MANUAL_ANALYSIS
+    
+    // INACTIVATED
+    // EXPIRED_USER_ANALYSIS
+    // REFUSED
+    // CANCELLED
+
+    public static function getAllowedTransactionCreditCardStatus() {
         return array_merge(self::TRANSACTION_WAITING_STATUS, self::TRANSACTION_PROCESSING_STATUS, self::TRANSACTION_PAID_STATUS);
     }
 

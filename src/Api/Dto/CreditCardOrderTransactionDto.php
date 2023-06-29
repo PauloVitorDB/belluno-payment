@@ -9,13 +9,13 @@ class CreditCardOrderTransactionDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var \BellunoApi\Api\Dto\PixTransactionDto $transaction public property
+     * @var \BellunoApi\Api\Dto\CreditCardTransactionDto $transaction public property
      */
     public $transaction;
 
     /**
      * Constructor to set initial or default values of member properties
-     * @param \BellunoApi\Api\Dto\PixTransactionDto $transaction 
+     * @param \BellunoApi\Api\Dto\CreditCardTransactionDto $transaction 
      */
     public function __construct()
     {

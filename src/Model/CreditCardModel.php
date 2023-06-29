@@ -55,9 +55,9 @@ class CreditCardModel implements JsonSerializable {
      *
      * @return  self
      */ 
-    public function setExpirationDate(\DateTime $expiration_date)
+    public function setExpirationDate($expirationMonth, $expirationYear)
     {
-        $this->expiration_date = ($expiration_date->format('m') . $expiration_date->format('Y'));
+        $this->expiration_date = ($expirationMonth . $expirationYear);
 
         return $this;
     }

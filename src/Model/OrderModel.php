@@ -15,16 +15,6 @@ abstract class OrderModel implements JsonSerializable {
     protected \BellunoApi\Model\PostbackModel $postback;
 
     protected $value;
-    
-    public function __construct() {
-     
-        if(func_num_args() == 3) {
-            $this->items = func_get_arg(0);
-            $this->postback = func_get_arg(1);
-            $this->value = func_get_arg(3);
-        }
-
-    }
 
     /**
      * Get the value of items

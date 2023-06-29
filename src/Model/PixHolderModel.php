@@ -2,7 +2,7 @@
 
 namespace BellunoApi\Model;
 
-class PixHolder {
+class PixHolderModel {
 
     private $name;
     private ContactModel $contact;

@@ -11,7 +11,7 @@ class BoletoOrderModel extends OrderModel implements JsonSerializable {
 
     private $documentCode;
 
-    private \BellunoApi\Model\PixHolder $holder;
+    private \BellunoApi\Model\PixHolderModel $holder;
 
     private \BellunoApi\Model\ShippingModel $shipping;
 
