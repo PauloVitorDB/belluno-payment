@@ -4,7 +4,7 @@ namespace BellunoApi\Model;
 
 use JsonSerializable;
 
-abstract class AddressModel implements JsonSerializable {
+class AddressModel implements JsonSerializable {
 
     protected $street;
     protected $number;

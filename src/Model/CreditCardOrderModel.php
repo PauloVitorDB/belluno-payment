@@ -19,7 +19,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
 
     private $visitorID;
 
-    private \BellunoApi\Model\AddressModel $billing;
+    private \BellunoApi\Model\CreditCardBillingAddress $billing;
 
     private \BellunoApi\Model\CardHolder $cardHolder;
     
@@ -50,7 +50,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
             "client_name" => $this->clientHolder->getName(),            
             "client_document" => $this->clientHolder->getDocumentNumber(),
             "client_email" => $this->clientHolder->getContact()->getEmail(),
-            "client_cellphone" => $this->clientHolder->getContact()->getPhone(),
+            "client_cellphone" => $this->clientHolder->getContact()->getPhone()->getCompleteNumber(),
 
             "details" => $this->details,
             "value" => $this->value,

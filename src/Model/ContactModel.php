@@ -16,12 +16,13 @@ class ContactModel {
     */
     private $phone;
 
-    public function setPhone($ddi, $ddd, $number) {
+    public function setPhone($ddi, $ddd, $number, $complete_number) {
 
         $this->phone = new PhoneModel(
             $ddi,
             $ddd,
-            $number
+            $number, 
+            $complete_number
         );
     }
 

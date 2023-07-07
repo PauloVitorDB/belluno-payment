@@ -108,6 +108,14 @@ class PixTransactionDto implements JsonSerializable {
     public $cart;
 
     /**
+     * @todo Write general description for this property
+     * @required
+     * @maps pix
+     * @var \BellunoApi\Api\Dto\PixDto $pix public property
+     */
+    public $pix;
+
+    /**
      * Constructor to set initial or default values of member properties
      * @param string $transaction_id
      * @param string $link
@@ -122,10 +130,11 @@ class PixTransactionDto implements JsonSerializable {
      * @param \BellunoApi\Api\Dto\ShippingDto $shipping
      * @param \BellunoApi\Api\Dto\PixPaymentDto[]|null $payments
      * @param \BellunoApi\Api\Dto\OrderItemDto[]|null $cart
+     * @param \BellunoApi\Api\Dto\PixDto $pix
      */
     public function __construct()
     {
-        if (13 == func_num_args()) {
+        if (14 == func_num_args()) {
             $this->transaction_id         = func_get_arg(0);
             $this->link       = func_get_arg(1);
             $this->status   = func_get_arg(2);
@@ -139,6 +148,7 @@ class PixTransactionDto implements JsonSerializable {
             $this->shipping    = func_get_arg(10);
             $this->payments    = func_get_arg(11);
             $this->cart    = func_get_arg(12);
+            $this->pix    = func_get_arg(13);
         }
     }
 
@@ -162,6 +172,7 @@ class PixTransactionDto implements JsonSerializable {
         $json["shipping"] = $this->shipping;
         $json["payments"] = $this->payments;
         $json["cart"] = $this->cart;
+        $json["pix"] = $this->pix;
 
         return $json;
     }

@@ -88,4 +88,24 @@ class BoletoOrderModel extends OrderModel implements JsonSerializable {
 
         return $this;
     }
+
+    /**
+     * Get the value of billing
+     */ 
+    public function getBilling()
+    {
+        return $this->billing;
+    }
+
+    /**
+     * Set the value of billing
+     *
+     * @return  self
+     */ 
+    public function setBilling($billing)
+    {
+        $this->billing = $billing;
+
+        return $this;
+    }
 }

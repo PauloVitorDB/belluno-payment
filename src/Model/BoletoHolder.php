@@ -18,7 +18,7 @@ class BoletoHolder implements JsonSerializable {
             "name" => $this->name,
             "document" => $this->document_number,
             "email" => $this->contact->getEmail(),
-            "phone" => $this->contact->getPhone()
+            "phone" => $this->contact->getPhone()->getCompleteNumber()
         ];
 
         return $json;

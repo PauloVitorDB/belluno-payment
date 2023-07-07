@@ -3,7 +3,7 @@
 namespace BellunoApi\Model;
 use JsonSerializable;
 
-class BoletoOrderModel extends OrderModel implements JsonSerializable {
+class PixOrderModel extends OrderModel implements JsonSerializable {
     
     private $dueDate;
     
@@ -45,7 +45,7 @@ class BoletoOrderModel extends OrderModel implements JsonSerializable {
             "client_name" => $this->holder->getName(),
             "client_document" => $this->holder->getDocumentNumber(),
             "client_email" => $this->holder->getContact()->getEmail(),
-            "client_cellphone" => $this->holder->getContact()->getPhone(),
+            "client_cellphone" => $this->holder->getContact()->getPhone()->getCompleteNumber(),
             "cart" => $this->items,
             "postback" => $this->postback,
             "shipping" => $this->shipping,
@@ -110,6 +110,26 @@ class BoletoOrderModel extends OrderModel implements JsonSerializable {
     public function setDetails($details)
     {
         $this->details = $details;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of shipping
+     */ 
+    public function getShipping()
+    {
+        return $this->shipping;
+    }
+
+    /**
+     * Set the value of shipping
+     *
+     * @return  self
+     */ 
+    public function setShipping($shipping)
+    {
+        $this->shipping = $shipping;
 
         return $this;
     }

@@ -5,37 +5,39 @@ namespace BellunoApi\Api;
 abstract class TransactionStatus {
 
     const TRANSACTION_PROCESSING_STATUS = [
-        "AUTHORIZED",
-        "IN_ANALYSIS"
+        "OPEN",
+        "PROCESSING",
+    ];  
+    
+    const TRANSACTION_ANALYSIS_STATUS = [
+        "CLIENT_MANUAL_ANALYSIS",
+        "MANUAL_ANALYSIS",
+        "USER_ANALYSIS"
     ];  
 
-    const TRANSACTION_WAITING_STATUS = [
-        "WAITING"
+    const TRANSACTION_CLOSURE_STATUS = [
+        "CLOSURE_BY_DEADLINE",
+        "CLOSURE_BY_REQUEST",
+        "CLOSURE_REQUESTED"
     ];  
 
     const TRANSACTION_ERROR_STATUS = [
-        "DECLINED",
-        "CANCELED"
+        "EXPIRED",
+        "INACTIVATED",
+        "EXPIRED_USER_ANALYSIS",
+        "REFUSED",
+        "CANCELLED"
     ];
 
     const TRANSACTION_PAID_STATUS = [
         "PAID"
     ];
 
-    // PAID
-    
-    // OPEN
-    // MANUAL_ANALYSIS
-    // EXPIRED
-    // CLIENT_MANUAL_ANALYSIS
-    
-    // INACTIVATED
-    // EXPIRED_USER_ANALYSIS
-    // REFUSED
-    // CANCELLED
+    public static function isAllowedFinishTransactionStatus($transaction_status) {
 
-    public static function getAllowedTransactionCreditCardStatus() {
-        return array_merge(self::TRANSACTION_WAITING_STATUS, self::TRANSACTION_PROCESSING_STATUS, self::TRANSACTION_PAID_STATUS);
+        $allowed_transactions_to_finish = array_merge(self::TRANSACTION_PROCESSING_STATUS, self::TRANSACTION_ANALYSIS_STATUS, self::TRANSACTION_PAID_STATUS);
+    
+        return (in_array(trim(str_replace(' ', '', strtoupper($transaction_status))), $allowed_transactions_to_finish));
     }
 
 }

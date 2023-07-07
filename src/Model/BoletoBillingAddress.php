@@ -12,6 +12,20 @@ class BoletoBillingAddress extends AddressModel implements JsonSerializable {
 
     private $country;
 
+    public function __construct() {
+
+        if(func_num_args() == 9) {
+            $this->postalCode = func_get_arg(0);
+            $this->district = func_get_arg(1);
+            $this->streetAddress = func_get_arg(2);
+            $this->number       = func_get_arg(3);
+            $this->city = func_get_arg(4);
+            $this->state         = func_get_arg(5);
+            $this->country = func_get_arg(6);
+        }
+
+    }
+
     /**
      * Get the value of district
      */ 
