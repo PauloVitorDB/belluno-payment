@@ -23,7 +23,7 @@ class RefundsDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $reason public property
+     * @var string|null $reason public property
      */
     public $reason;
 
