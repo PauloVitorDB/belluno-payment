@@ -54,7 +54,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
 
             "details" => $this->details,
             "value" => $this->value,
-            "shipping" => $this->shipping,
+            "shipping" => $this->shipping->getAddress(),
             "billing" => $this->billing,
             "cart" => $this->items,
             "postback" => $this->postback,
