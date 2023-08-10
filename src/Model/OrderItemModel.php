@@ -25,7 +25,7 @@ class OrderItemModel implements JsonSerializable {
     public function jsonSerialize() {
         
         $json = [
-            "product_name" => $this->reference_id,
+            "product_name" => $this->name,
             "quantity" => $this->quantity,
             "unit_value" => $this->unit_amount
         ];
