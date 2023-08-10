@@ -36,7 +36,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
             
             "cardholder_name" => $this->cardHolder->getName(),
             "cardholder_document" => $this->cardHolder->getDocumentNumber(),
-            "cardholder_cellphone" => $this->cardHolder->getContact()->getPhone(),
+            "cardholder_cellphone" => $this->cardHolder->getContact()->getPhone()->getCompleteNumber(),
             "cardholder_birth" => $this->cardHolder->getBirthDate(),
             
             "brand" => $this->brand,
