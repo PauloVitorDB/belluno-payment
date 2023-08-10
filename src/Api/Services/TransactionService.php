@@ -103,7 +103,7 @@ class TransactionService extends BaseServiceRequest {
         OrderModel $order
     ) {
 
-        $endpoint = '/transaction/bankslip';
+        $endpoint = '/bankslip';
 
         $body = json_encode($order);
 
