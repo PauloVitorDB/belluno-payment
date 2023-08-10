@@ -24,7 +24,8 @@ final class ApiRest implements RequestInterface {
         
         $curl = curl_init(); 
 
-        $url = $this->url . $endpoint;
+        $url =  $this->getURL($endpoint);
+
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         
@@ -71,6 +72,15 @@ final class ApiRest implements RequestInterface {
             $url
         ];
 
+    }
+    
+    public function getURL($endpoint) {
+        
+        if(substr($this->url, -1) === "/" && strlen($endpoint) > 0 && substr($endpoint, 0, 1) === "/") {
+            $endpoint = substr($endpoint, 1);
+        }
+
+        return $this->url . $endpoint;
     }
 
 }
