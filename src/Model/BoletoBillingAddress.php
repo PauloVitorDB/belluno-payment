@@ -14,7 +14,7 @@ class BoletoBillingAddress extends AddressModel implements JsonSerializable {
 
     public function __construct() {
 
-        if(func_num_args() == 9) {
+        if(func_num_args() == 7) {
             $this->postalCode = func_get_arg(0);
             $this->district = func_get_arg(1);
             $this->streetAddress = func_get_arg(2);
