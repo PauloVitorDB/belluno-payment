@@ -84,7 +84,7 @@ class BoletoOrderModel extends OrderModel implements JsonSerializable {
      */ 
     public function setDocumentCode($documentCode)
     {
-        $this->documentCode = $documentCode;
+        $this->documentCode = (string)$documentCode;
 
         return $this;
     }
