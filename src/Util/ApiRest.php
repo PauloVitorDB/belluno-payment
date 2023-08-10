@@ -54,6 +54,8 @@ final class ApiRest implements RequestInterface {
                 }
             break;
         }
+
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         
         $response = curl_exec($curl);
         if($parse_response) $response = json_decode($response);
