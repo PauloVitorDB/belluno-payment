@@ -15,7 +15,7 @@ class HashService extends BaseServiceRequest {
     private static $instance;
 
     private function __construct() {
-        parent::__construct(Environment::$BASE_URL_SDK);
+        parent::__construct(Environment::$BASE_URL);
     }
 
     public static function getInstance() {
