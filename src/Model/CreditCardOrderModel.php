@@ -9,7 +9,7 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
     
     private int $installments = 1;
 
-    private bool $capture = 1;
+    private $capture = 1;
 
     private $brand;
 
