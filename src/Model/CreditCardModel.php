@@ -2,7 +2,7 @@
 
 namespace BellunoApi\Model;
 
-use phpseclib3\Crypt\RSA;
+use phpseclib\Crypt\RSA;
 use JsonSerializable;
 
 class CreditCardModel implements JsonSerializable {
