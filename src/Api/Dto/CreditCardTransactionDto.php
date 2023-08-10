@@ -111,7 +111,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps client_analyses
-     * @var \BellunoApi\Api\Dto\AnalysesDto[] $client_analyses public property
+     * @var \BellunoApi\Api\Dto\AnalysesDto[]|null $client_analyses public property
      */
     public $client_analyses;
 
@@ -119,7 +119,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps client_analyses
-     * @var \BellunoApi\Api\Dto\AnalysesDto[] $belluno_analyses public property
+     * @var \BellunoApi\Api\Dto\AnalysesDto[]|null $belluno_analyses public property
      */
     public $belluno_analyses;
 
