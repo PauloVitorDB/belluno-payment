@@ -139,7 +139,7 @@ class TransactionService extends BaseServiceRequest {
 
     public function getBoletoTransaction($transaction_id) {
 
-        $endpoint = "/transaction/$transaction_id/pix";
+        $endpoint = "/bankslip/$transaction_id";
 
         list($response, $http_code, $req_headers, $url) = $this->request->defaultRequest(
             $endpoint,
