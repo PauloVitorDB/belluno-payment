@@ -38,6 +38,8 @@ class PixOrderModel extends OrderModel implements JsonSerializable {
     
     public function jsonSerialize() {
 
+        $address = $this->shipping->getAddress();
+
         $json["transaction"] = [
             "details" => $this->details,
             "value" => $this->value,
@@ -48,7 +50,14 @@ class PixOrderModel extends OrderModel implements JsonSerializable {
             "client_cellphone" => $this->holder->getContact()->getPhone()->getCompleteNumber(),
             "cart" => $this->items,
             "postback" => $this->postback,
-            "shipping" => $this->shipping,
+            "shipping" => [
+                "postalCode" => $address->getPostalCode(),
+                "street" => $address->getStreet(),
+                "number" => $address->getNumber(),
+                "complement" => $address->getComplement(),
+                "city" => $address->getCity(),
+                "state" => $address->getState(),
+            ],
         ];
 
         return $json;
