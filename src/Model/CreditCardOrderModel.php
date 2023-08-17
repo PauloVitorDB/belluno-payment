@@ -262,4 +262,24 @@ class CreditCardOrderModel extends OrderModel implements JsonSerializable {
 
         return $this;
     }
+
+    /**
+     * Get the value of visitorID
+     */ 
+    public function getVisitorID()
+    {
+        return $this->visitorID;
+    }
+
+    /**
+     * Set the value of visitorID
+     *
+     * @return  self
+     */ 
+    public function setVisitorID($visitorID)
+    {
+        $this->visitorID = $visitorID;
+
+        return $this;
+    }
 }
