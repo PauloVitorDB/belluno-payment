@@ -37,7 +37,7 @@ abstract class TransactionStatus {
 
         $allowed_transactions_to_finish = array_merge(self::TRANSACTION_PROCESSING_STATUS, self::TRANSACTION_ANALYSIS_STATUS, self::TRANSACTION_PAID_STATUS);
     
-        return (in_array(trim(str_replace(' ', '', strtoupper($transaction_status))), $allowed_transactions_to_finish));
+        return (in_array((str_replace(' ', '_', trim(strtoupper($transaction_status)))), $allowed_transactions_to_finish));
     }
 
 }
