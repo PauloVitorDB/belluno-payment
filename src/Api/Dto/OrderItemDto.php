@@ -30,7 +30,7 @@ class OrderItemDto implements JsonSerializable {
     /**
      * Constructor to set initial or default values of member properties
      * @param string  $product_name          Initialization value for $this->reference_id
-     * @param integer $unit_value    Initialization value for $this->unit_amount
+     * @param $unit_value    Initialization value for $this->unit_amount
      * @param string  $quantity Initialization value for $this->quantity
      */
     public function __construct()

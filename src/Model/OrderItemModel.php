@@ -9,7 +9,7 @@ class OrderItemModel implements JsonSerializable {
     private $reference_id;
     private $name;
     private int $quantity;
-    private int $unit_amount;
+    private $unit_amount;
 
 
     function __construct() {
