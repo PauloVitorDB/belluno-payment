@@ -9,21 +9,21 @@ class OrderItemDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $product_name public property
+     * @var string|null $product_name public property
      */
     public $product_name;
 
     /**
      * @todo Write general description for this property
      * @required
-     * @var integer $unit_value public property
+     * @var integer|null $unit_value public property
      */
     public $unit_value;
 
     /**
      * @todo Write general name for this property
      * @required
-     * @var integer $quantity public property
+     * @var integer|null $quantity public property
      */
     public $quantity;
 

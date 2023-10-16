@@ -9,14 +9,14 @@ class ShippingDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $postalCode public property
+     * @var string|null $postalCode public property
      */
     public $postalCode;
 
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $street public property
+     * @var string|null $street public property
      */
     public $street;
 
@@ -24,7 +24,7 @@ class ShippingDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $number public property
+     * @var string|null $number public property
      */
     public $number;
 
@@ -32,14 +32,14 @@ class ShippingDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $city public property
+     * @var string|null $city public property
      */
     public $city;
 
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $state public property
+     * @var string|null $state public property
      */
     public $state;
 

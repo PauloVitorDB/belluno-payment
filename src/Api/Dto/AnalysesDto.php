@@ -9,7 +9,7 @@ class AnalysesDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $decision public property
+     * @var string|null $decision public property
      */
     public $decision;
 
@@ -17,7 +17,7 @@ class AnalysesDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $details public property
+     * @var string|null $details public property
      */
     public $details;
     

@@ -8,21 +8,21 @@ class CreditCardHolderDto implements JsonSerializable {
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $name public property
+     * @var string|null $name public property
      */
     public $name;
 
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $document public property
+     * @var string|null $document public property
      */
     public $document;
 
     /**
      * @todo Write general description for this property
      * @required
-     * @var string $birthday public property
+     * @var string|null $birthday public property
      */
     public $birthday;
 
@@ -35,9 +35,9 @@ class CreditCardHolderDto implements JsonSerializable {
 
     /**
      * Constructor to set initial or default values of member properties
-     * @param string              $name  
-     * @param string              $email 
-     * @param string              $document
+     * @param string|null              $name  
+     * @param string|null              $email 
+     * @param string|null              $document
      * @param string|null         $phone
      * @param string|null         $cellphone
      */

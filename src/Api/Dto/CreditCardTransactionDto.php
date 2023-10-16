@@ -17,7 +17,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps link
-     * @var string $link public property
+     * @var string|null $link public property
      */
     public $link;
 
@@ -41,7 +41,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps value
-     * @var string $value public property
+     * @var string|null $value public property
      */
     public $value;
 
@@ -49,7 +49,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps created_at
-     * @var \DateTime $created_at public property
+     * @var \DateTime|null $created_at public property
      */
     public $created_at;
 
@@ -57,7 +57,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps created_by
-     * @var string $created_by public property
+     * @var string|null $created_by public property
      */
     public $created_by;
 
@@ -65,14 +65,14 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps code_valid_until
-     * @var \DateTime $code_valid_until public property
+     * @var \DateTime|null $code_valid_until public property
      */
     public $code_valid_until;
 
     /**
      * @todo Write general description for this property
      * @maps details
-     * @var string $details public property
+     * @var string|null $details public property
      */
     public $details;
 
@@ -87,7 +87,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps shipping
-     * @var \BellunoApi\Api\Dto\ShippingDto $shipping public property
+     * @var \BellunoApi\Api\Dto\ShippingDto|null $shipping public property
      */
     public $shipping;
 
@@ -103,7 +103,7 @@ class CreditCardTransactionDto implements JsonSerializable {
      * @todo Write general description for this property
      * @required
      * @maps cart
-     * @var \BellunoApi\Api\Dto\OrderItemDto[] $cart public property
+     * @var \BellunoApi\Api\Dto\OrderItemDto[]|null $cart public property
      */
     public $cart;
 

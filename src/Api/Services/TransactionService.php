@@ -48,13 +48,13 @@ class TransactionService extends BaseServiceRequest {
       
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $pixOrderTransactionDto = $mapper->map($response, new PixOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $pixOrderTransactionDto = $mapper->map($response, new PixOrderTransactionDto());
       
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::POST,
-            $pixOrderTransactionDto,
+            $response,
             $body,
             $response,
             $req_headers,
@@ -81,13 +81,13 @@ class TransactionService extends BaseServiceRequest {
 
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $pixOrderTransactionDto = $mapper->map($response, new PixOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $pixOrderTransactionDto = $mapper->map($response, new PixOrderTransactionDto());
        
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::GET,
-            $pixOrderTransactionDto,
+            $response,
             '',
             $response,
             $req_headers,
@@ -119,13 +119,13 @@ class TransactionService extends BaseServiceRequest {
       
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $boletoOrderTransactionDto = $mapper->map($response, new BoletoOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $boletoOrderTransactionDto = $mapper->map($response, new BoletoOrderTransactionDto());
       
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::POST,
-            $boletoOrderTransactionDto,
+            $response,
             $body,
             $response,
             $req_headers,
@@ -152,13 +152,13 @@ class TransactionService extends BaseServiceRequest {
       
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $boletoOrderTransactionDto = $mapper->map($response, new BoletoOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $boletoOrderTransactionDto = $mapper->map($response, new BoletoOrderTransactionDto());
        
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::GET,
-            $boletoOrderTransactionDto,
+            $response,
             '',
             $response,
             $req_headers,
@@ -190,13 +190,13 @@ class TransactionService extends BaseServiceRequest {
       
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $creditCardOrderTransactionDto = $mapper->map($response, new CreditCardOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $creditCardOrderTransactionDto = $mapper->map($response, new CreditCardOrderTransactionDto());
       
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::POST,
-            $creditCardOrderTransactionDto,
+            $response,
             $body,
             $response,
             $req_headers,
@@ -223,13 +223,13 @@ class TransactionService extends BaseServiceRequest {
       
         Response::validate($response, $http_code);
 
-        $mapper = new \JsonMapper();
-        $creditCardOrderTransactionDto = $mapper->map($response, new CreditCardOrderTransactionDto());
+        // $mapper = new \JsonMapper();
+        // $creditCardOrderTransactionDto = $mapper->map($response, new CreditCardOrderTransactionDto());
        
         $responseHttpRange = new ResponseHttpRange(200, 299);
         return ( new Response(
             ApiRest::GET,
-            $creditCardOrderTransactionDto,
+            $response,
             '',
             $response,
             $req_headers,

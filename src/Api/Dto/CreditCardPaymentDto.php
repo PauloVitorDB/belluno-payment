@@ -72,12 +72,6 @@ class CreditCardPaymentDto implements JsonSerializable {
      */
     public $billing;
 
-    /**
-     * @todo Write general description for this property
-     * @required
-     * @var \BellunoApi\Api\Dto\RefundsDto|null $refunds public property
-     */
-    public $refunds;
 
     /**
      * Encode this object to JSON
@@ -94,7 +88,6 @@ class CreditCardPaymentDto implements JsonSerializable {
         $json["paid_at"] = $this->paid_at;
         $json["cardholder"] = $this->cardholder;
         $json["billing"] = $this->billing;
-        $json["refunds"] = $this->refunds;
 
         return $json;
     }
